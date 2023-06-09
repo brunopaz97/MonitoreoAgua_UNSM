@@ -1,0 +1,39 @@
+.container-index {
+  text-align: center;
+}
+
+.image-container-index {
+  position: relative;
+  display: inline-block;
+  width: 1200px;
+}
+
+.centered-image-index {
+  display: block;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Cambia el último valor (0.7) para ajustar la opacidad */
+}
+
+.title-index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Nunito,sans-serif;
+  font-size: 35px;
+  color: floralwhite;
+  text-align: center;
+}
+
+.card-datos{
+  align-items: center;
+  text-align: center;
+}

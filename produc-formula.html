@@ -18,6 +18,7 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
         <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     </head>
 
@@ -36,12 +37,13 @@
                 <div class="h-100" id="leftside-menu-container" data-simplebar="">
 
                     <!--- Sidemenu -->
+                    <!--- Sidemenu -->
                     <ul class="side-nav">
 
                         <li class="side-nav-title side-nav-item">Navegación</li>
 
-                        <li class="side-nav-item">
-                            <a href="index.html" class="side-nav-link">
+                        <li class="side-nav-item menuitem-active">
+                            <a href="index.html" class="side-nav-link active">
                                 <i class="uil-home-alt"></i>
                                 <span> Inicio </span>
                             </a>
@@ -49,57 +51,108 @@
                         <hr style="height: 3px;">
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarProduccion" aria-expanded="false" aria-controls="sidebarProduccion" class="side-nav-link">
-                                <i><img src="assets/images/icons_agua/produccion.svg"></i>
-                                <span> Fase de Producción </span>
+                                <img src="assets/images/icons_agua/produccion.svg">
+                                <span> &nbsp &nbsp Fase de Producción </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarProduccion">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="produc-formula.html">Fórmula</a>
+                                        <a href="produc-formula.html">Formulario</a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <a href="#">Estadísticas</a>
+                                    </li>
+                                    -->
+                                </ul>
+                            </div>
+
+                            <!-- Opcion Activa IMPORTANTE
+                            <ul class="side-nav-second-level">
+                                    <li class="menuitem-active">
+                                        <a href="apps-ecommerce-products.html" class="active">Products</a>
                                     </li>
                                     <li>
-                                        <a href="produc-stats.html">Estadísticas</a>
+                                        <a href="apps-ecommerce-products-details.html">Products Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-orders.html">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-orders-details.html">Order Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-customers.html">Customers</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-checkout.html">Checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-sellers.html">Sellers</a>
                                     </li>
                                 </ul>
-                            </div>                            
+                            -->
+
                         </li>
 
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarCalidad" aria-expanded="false" aria-controls="sidebarCalidad" class="side-nav-link">
-                                <i><img src="assets/images/icons_agua/calidad.svg"></i>
-                                <span> Calidad de Agua </span>
+                                <img src="assets/images/icons_agua/calidad.svg">
+                                <span> &nbsp &nbsp Calidad de Agua </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarCalidad">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="produc-monitoreo.html">Monitoreo</a>
+                                        <a href="calidad-monitoreo.html">Monitoreo</a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <a href="#">Márgenes</a>
                                     </li>
                                     <li>
-                                        <a href="produc-margenes.html">Márgenes</a>
+                                        <a href="#">Eventos</a>
                                     </li>
-                                    <li>
-                                        <a href="produc-eventos.html">Eventos</a>
-                                    </li>
+                                    -->
                                 </ul>
                             </div>
                         </li>
 
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarAlimentacion" aria-expanded="false" aria-controls="sidebarAlimentacion" class="side-nav-link">
-                                <i><img src="assets/images/icons_agua/alimentacion.svg"></i>
-                                <span> Alimentación </span>
+                                <img src="assets/images/icons_agua/alimentacion.svg">
+                                <span> &nbsp &nbsp Alimentación </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarAlimentacion">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="alimentacion-formula.html">Fórmula</a>
+                                        <a href="alimentacion-formula.html">Formulario</a>
                                     </li>
                                     <li>
                                         <a href="alimentacion-estadisticas.html">Estadísticas</a>
                                     </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarReportes" aria-expanded="false" aria-controls="sidebarReportes" class="side-nav-link">
+                                <img src="assets/images/icons_agua/reportes.svg">
+                                <span> &nbsp &nbsp Reportes </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarReportes">
+                                <ul class="side-nav-second-level">
+                                    <!--
+                                    <li>
+                                        <a href="#">Historial</a>
+                                    </li>
+                                    -->
                                 </ul>
                             </div>
                         </li>
@@ -234,7 +287,7 @@
                             </div>
                         </div>
                         <!-- end page title -->
-                        <form >
+                        <form onsubmit="return validarFormulario()" action="registro_formula.php" method="post">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card">
@@ -243,36 +296,23 @@
                                             <!-- Date Range -->
                                             <div class="mb-3">
                                                 <label for="example-select" class="form-label">Seleccione piscigranja</label>
-                                                <select class="form-select" id="example-select">
-                                                    <option>Piscigranja 1</option>
-                                                    <option>Piscigranja 2</option>
-                                                    <option>Piscigranja 3</option>
-                                                    <option>Piscigranja 4</option>
-                                                    <option>Piscigranja 5</option>
+                                                <select class="form-control piscigranja" id="selec-pisci" name="selec-pisci">
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="example-select" class="form-label">Seleccione tipo de cultivo</label>
-                                                <select class="form-select" id="example-select">
-                                                    <option>Extensivo</option>
-                                                    <option>Semi-intesivo</option>
-                                                    <option>Intensivo</option>
+                                                <select class="form-control cultivo" id="selec-cult" name="selec-cult">
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="example-select" class="form-label">Seleccione la etapa de la tilapia</label>
-                                                <select class="form-select" id="example-select">
-                                                    <option>Pre-iniciación</option>
-                                                    <option>Iniciación</option>
-                                                    <option>Engorda</option>
-                                                    <option>Finalización</option>                                                    
+                                                <select class="form-control tilapia" id="selec-etapa" name="selec-etapa">
                                                 </select>
                                             </div>
-    
-                                            <div class="mb-3 position-relative" id="datepicker1">
-                                                <label class="form-label">Fecha de registro</label>
-                                                <input type="text" class="form-control" data-provide="datepicker" data-date-container="#datepicker1" required>
-                                            </div>                                        
+                                            <div class="mb-3">
+                                                <label for="example-date" class="form-label">Fecha de registro</label>
+                                                <input class="form-control" id="example-date" type="date" name="fec_reg" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -287,28 +327,28 @@
                                                     <!-- Peso alevin-->
                                                     <div class="mb-3">
                                                         <label for="example-number" class="form-label">Peso Alevin (gr)</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <input name ="pes_ale" type="number" id="example-number" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <!-- Area del estanque-->
+                                                    <!-- Volúmen del estanque-->
                                                     <div class="mb-3">
-                                                        <label for="example-number" class="form-label">Área del Estanque (m<sup>2</sup>)</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <label for="example-number" class="form-label">Volumen del Estanque (m<sup>3</sup>)</label>
+                                                        <input name ="are_est" type="number" id="example-number" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <!-- Densidad-->
                                                     <div class="mb-3">
-                                                        <label for="example-number" class="form-label">Densidad (peces/m<sup>2</sup>)</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <label for="example-number" class="form-label">Densidad (peces/m<sup>3</sup>)</label>
+                                                        <input name ="densidad" type="number" id="example-number" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <!-- Recambio de agua x dia-->
                                                     <div class="mb-3">
                                                         <label for="example-number" class="form-label">Recambio de agua x día (%)</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <input name ="rec_agua" type="number" id="example-number" class="form-control" value="0.00" step="0.10" min="0" max="100" required>
                                                     </div>
                                                 </div>
                                                 <h4 class="header-title">Datos del alimento</h4>
@@ -316,18 +356,25 @@
                                                     <!-- Proteina-->
                                                     <div class="mb-3">
                                                         <label for="example-number" class="form-label">Proteína (%)</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <input name ="proteina" type="number" id="example-number" class="form-control" value="0.00" min="0" max="100" step="0.10" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <!-- Frecuencia de alimentos-->
+                                                    <div class="mb-3">
+                                                        <label for="example-number" class="form-label">Frecuencia de alimentos</label>
+                                                        <input name ="frec_ali" type="number" id="example-number" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <!-- Racion de alimentos-->
                                                     <div class="mb-3">
-                                                        <label for="example-number" class="form-label">Ración de alimentos (veces/día)</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <label for="example-number" class="form-label">Ración de alimentos</label>
+                                                        <input name ="rac_ali" type="number" id="example-number" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                                    <button class="btn btn-info">Guardar</button>
+                                                    <button class="btn btn-info" name="guardar_form" type="submit">Guardar</button>
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -346,7 +393,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                                <script>document.write(new Date().getFullYear())</script> © Inictel-UNI
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-end footer-links d-none d-md-block">
@@ -369,6 +416,86 @@
 
         </div>
         <!-- bundle -->
+        <script>
+            //CARGA DE LAS PISCIGRANJAS
+            $(document).ready(function(){
+            $.ajax({
+                type: 'POST',
+                url: 'registro.php',
+                data: {action:'piscigranja'},
+                dataType: 'JSON',
+                success: function(response){
+                var options = '<option value="">Seleccione</option>';
+                $.each(response, function(index, value){
+                    options += '<option value="'+value.id+'">'+value.nombre+'</option>';
+                    console.log(index + ": " + value.id);
+                }); 
+                $('.piscigranja').html(options); 
+                $('.tilapia').html('<option value="">Seleccione</option>');                
+                $('.cultivo').html('<option value="">Seleccione</option>');       
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+                console.log(errorThrown)
+            });
+            });
+            
+            //OBTENEMOS LAS ETAPAS DE TILAPIAS POR PISCIGRANJA
+            $('.piscigranja').on('change', function(){
+            var id = $(this).val();
+            $.ajax({
+                type: 'POST',
+                url: 'registro.php',
+                data: {action:'tilapia', id:id},
+                dataType: 'JSON',
+                success: function(response){
+                var options = '<option value="">Seleccione</option>';
+                $.each(response, function(index, value){
+                    options += '<option value="'+value.id+'">'+value.etapa+'</option>';
+                }); 
+                $('.tilapia').html(options);
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+            });
+            });
+
+            //OBTENEMOS LOS TIPOS DE CULTIVO POR PISCIGRANJA
+            $('.piscigranja').on('change', function(){
+            var id = $(this).val();
+            $.ajax({
+                type: 'POST',
+                url: 'registro.php',
+                data: {action:'cultivo', id:id},
+                dataType: 'JSON',
+                success: function(response){
+                var options = '<option value="">Seleccione</option>';
+                $.each(response, function(index, value){
+                    options += '<option value="'+value.id+'">'+value.tipo_cultivo+'</option>';
+                }); 
+                $('.cultivo').html(options);
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+            });
+            });
+        </script>
+
+        <script>
+            function validarFormulario() {
+                var opcion = document.getElementById('selec-etapa');
+                var valorSeleccionado = opcion.value;
+
+                // Verificar si se ha seleccionado la opción por defecto
+                if (valorSeleccionado === '') {
+                    alert('Por favor, complete la selección de la piscigranja.');
+                    return false; // Evitar el envío del formulario
+                }
+
+                // Si se ha seleccionado una opción válida, permitir el envío del formulario
+                return true;
+            }
+        </script>
         <script src="assets/js/vendor.min.js"></script>
         <script src="assets/js/app.min.js"></script>
 

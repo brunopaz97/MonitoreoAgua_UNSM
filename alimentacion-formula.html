@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -6,7 +6,7 @@
         <title>Monitoreo del agua</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
-        <meta content="Coderthemes" name="author">
+
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/logo-inictel.ico">
 
@@ -18,6 +18,19 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
         <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            function sumar(){
+                const $total = document.getElementById('total');
+                let subtotal = 0;
+                [ ...document.getElementsByClassName( "monto" ) ].forEach( function ( element ) {
+                    if(element.value !== '') {
+                    subtotal += parseFloat(element.value);
+                    }
+                });
+                $total.value = subtotal.toFixed(2);
+            }
+        </script>
 
     </head>
 
@@ -36,12 +49,13 @@
                 <div class="h-100" id="leftside-menu-container" data-simplebar="">
 
                     <!--- Sidemenu -->
+                    <!--- Sidemenu -->
                     <ul class="side-nav">
 
                         <li class="side-nav-title side-nav-item">Navegación</li>
 
-                        <li class="side-nav-item">
-                            <a href="index.html" class="side-nav-link">
+                        <li class="side-nav-item menuitem-active">
+                            <a href="index.html" class="side-nav-link active">
                                 <i class="uil-home-alt"></i>
                                 <span> Inicio </span>
                             </a>
@@ -49,57 +63,108 @@
                         <hr style="height: 3px;">
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarProduccion" aria-expanded="false" aria-controls="sidebarProduccion" class="side-nav-link">
-                                <i><img src="assets/images/icons_agua/produccion.svg"></i>
-                                <span> Fase de Producción </span>
+                                <img src="assets/images/icons_agua/produccion.svg">
+                                <span> &nbsp &nbsp Fase de Producción </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarProduccion">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="produc-formula.html">Fórmula</a>
+                                        <a href="produc-formula.html">Formulario</a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <a href="#">Estadísticas</a>
+                                    </li>
+                                    -->
+                                </ul>
+                            </div>
+
+                            <!-- Opcion Activa IMPORTANTE
+                            <ul class="side-nav-second-level">
+                                    <li class="menuitem-active">
+                                        <a href="apps-ecommerce-products.html" class="active">Products</a>
                                     </li>
                                     <li>
-                                        <a href="produc-stats.html">Estadísticas</a>
+                                        <a href="apps-ecommerce-products-details.html">Products Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-orders.html">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-orders-details.html">Order Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-customers.html">Customers</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-checkout.html">Checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-sellers.html">Sellers</a>
                                     </li>
                                 </ul>
-                            </div>                            
+                            -->
+
                         </li>
 
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarCalidad" aria-expanded="false" aria-controls="sidebarCalidad" class="side-nav-link">
-                                <i><img src="assets/images/icons_agua/calidad.svg"></i>
-                                <span> Calidad de Agua </span>
+                                <img src="assets/images/icons_agua/calidad.svg">
+                                <span> &nbsp &nbsp Calidad de Agua </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarCalidad">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="produc-monitoreo.html">Monitoreo</a>
+                                        <a href="calidad-monitoreo.html">Monitoreo</a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <a href="#">Márgenes</a>
                                     </li>
                                     <li>
-                                        <a href="produc-margenes.html">Márgenes</a>
+                                        <a href="#">Eventos</a>
                                     </li>
-                                    <li>
-                                        <a href="produc-eventos.html">Eventos</a>
-                                    </li>
+                                    -->
                                 </ul>
                             </div>
                         </li>
 
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarAlimentacion" aria-expanded="false" aria-controls="sidebarAlimentacion" class="side-nav-link">
-                                <i><img src="assets/images/icons_agua/alimentacion.svg"></i>
-                                <span> Alimentación </span>
+                                <img src="assets/images/icons_agua/alimentacion.svg">
+                                <span> &nbsp &nbsp Alimentación </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarAlimentacion">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="alimentacion-formula.html">Fórmula</a>
+                                        <a href="alimentacion-formula.html">Formulario</a>
                                     </li>
                                     <li>
                                         <a href="alimentacion-estadisticas.html">Estadísticas</a>
                                     </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarReportes" aria-expanded="false" aria-controls="sidebarReportes" class="side-nav-link">
+                                <img src="assets/images/icons_agua/reportes.svg">
+                                <span> &nbsp &nbsp Reportes </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarReportes">
+                                <ul class="side-nav-second-level">
+                                    <!--
+                                    <li>
+                                        <a href="#">Historial</a>
+                                    </li>
+                                    -->
                                 </ul>
                             </div>
                         </li>
@@ -234,7 +299,7 @@
                             </div>
                         </div>
                         <!-- end page title -->
-                        <form >
+                        <form onsubmit="return validarFormulario()" action="registro_alimentacion.php" method="post" id="formulario">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card">
@@ -243,29 +308,19 @@
                                             <!-- Date Range -->
                                             <div class="mb-3">
                                                 <label for="example-select" class="form-label">Seleccione piscigranja</label>
-                                                <select class="form-select" id="example-select">
-                                                    <option>Piscigranja 1</option>
-                                                    <option>Piscigranja 2</option>
-                                                    <option>Piscigranja 3</option>
-                                                    <option>Piscigranja 4</option>
-                                                    <option>Piscigranja 5</option>
+                                                <select class="form-control piscigranja" id="selec-pisci" name="selec-pisci">
                                                 </select>
                                             </div>
     
                                             <div class="mb-3">
                                                 <label for="example-select" class="form-label">Seleccione la etapa de la tilapia</label>
-                                                <select class="form-select" id="example-select">
-                                                    <option>Etapa 1</option>
-                                                    <option>Etapa 2</option>
-                                                    <option>Etapa 3</option>
-                                                    <option>Etapa 4</option>
-                                                    <option>Etapa 5</option>
+                                                <select class="form-control tilapia" id="selec-etapa" name="selec-etapa">                                    
                                                 </select>
                                             </div>
     
-                                            <div class="mb-3 position-relative" id="datepicker1">
-                                                <label class="form-label">Fecha de registro</label>
-                                                <input type="text" class="form-control" data-provide="datepicker" data-date-container="#datepicker1" required>
+                                            <div class="mb-3">
+                                                <label for="example-date" class="form-label">Fecha de registro</label>
+                                                <input class="form-control" id="example-date" type="date" name="fec_reg" required>
                                             </div>                                        
                                         </div>
                                     </div>
@@ -281,107 +336,113 @@
                                                     <!-- Cantidad de Kg-->
                                                     <div class="mb-3">
                                                         <label for="example-number" class="form-label">Cantidad de Kg</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <input type="number" name="cant_kg" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <!-- Cantidad de peces-->
                                                     <div class="mb-3">
                                                         <label for="example-number" class="form-label">Cantidad de peces</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <input type="number" name="cant_peces" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <!-- Cantidad de veces por día-->
                                                     <div class="mb-3">
-                                                        <label for="example-number" class="form-label">Veces/día</label>
-                                                        <input name ="number" type="number" id="example-number" class="form-control" value="0" min="0" required>
+                                                        <label for="example-number" class="form-label">Veces por día</label>
+                                                        <input type="number" name="veces_dia" class="form-control" value="0" min="0" required>
                                                     </div>
                                                 </div>
                                                 <h4 class="header-title">Composición de ingredientes(%)</h4>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Harina de pescado</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input type="number" name="har_pesc" class="form-control monto" value="0.00" min="0" max="100" step="0.1" required onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Salvado de trigo</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="salv_trigo" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Fosfato dicalcio</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="fosf_dical" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Aceite de pescado</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="ace_pesc" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Mandioca</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="mandi" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Pre-mezcla vitamínica</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="prem_vit" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
-                                                        <label class="form-label">Maiz</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <label class="form-label">Maíz</label>
+                                                        <input name="maiz" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Harina de soya</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="har_soya" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Pre-mezcla mineral</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="prem_min" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Salvado de arroz</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="salv_arr" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Piedra caliza</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="pied_caliz" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control monto" onchange="sumar();">
                                                     </div>
                                                 </div>
-                                                <h4 class="header-title">Composición proximal(%)</h4>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
-                                                        <label class="form-label">Proteina cruda</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <label class="form-label">Porcentaje total</label>
+                                                        <input class="form-control" type="number" id="total" readonly required/>
+                                                    </div>
+                                                </div>
+                                                <h4 class="header-title">Composición aproximada de la fórmula(%)</h4>
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Proteína cruda</label>
+                                                        <input name="prot_crud" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Fibra cruda</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="fib_crud" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="mb-3">
                                                         <label class="form-label">Lípidos crudos</label>
-                                                        <input data-toggle="touchspin" value="0.00" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%" data-bts-button-up-class="btn btn-info" data-bts-button-down-class="btn btn-info">
+                                                        <input name="lip_crud" value="0.00" type="number" min="0" max="100" step="0.1" required class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
@@ -389,12 +450,12 @@
                                                         <label class="form-label">Costo total</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text" id="basic-addon1">$</span>
-                                                            <input type="number" class="form-control" min="0" max="999999" value="0" required>
+                                                            <input type="number" name="cost_tot" class="form-control" min="0" max="999999" value="0" required>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                                    <button class="btn btn-info">Guardar</button>
+                                                    <button class="btn btn-info" name="guardar_form" type="submit"> Guardar </button>
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -402,7 +463,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                        
                     <!-- container -->
 
                 </div>
@@ -413,7 +474,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                                <script>document.write(new Date().getFullYear())</script> © Inictel-UNI
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-end footer-links d-none d-md-block">
@@ -436,11 +497,78 @@
 
         </div>
         <!-- bundle -->
+        <script>
+            //CARGA DE LAS PISCIGRANJAS
+            $(document).ready(function(){
+            $.ajax({
+                type: 'POST',
+                url: 'registro.php',
+                data: {action:'piscigranja'},
+                dataType: 'JSON',
+                success: function(response){
+                var options = '<option value="">Seleccione</option>';
+                $.each(response, function(index, value){
+                    options += '<option value="'+value.id+'">'+value.nombre+'</option>';
+                }); 
+                $('.piscigranja').html(options); 
+                $('.tilapia').html('<option value="">Seleccione</option>');
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+                console.log(errorThrown)
+            });
+            });
+            
+            //OBTENEMOS LAS ETAPAS DE TILAPIAS POR PISCIGRANJA
+            $('.piscigranja').on('change', function(){
+            var id = $(this).val();
+            $.ajax({
+                type: 'POST',
+                url: 'registro.php',
+                data: {action:'tilapia', id:id},
+                dataType: 'JSON',
+                success: function(response){
+                var options = '<option value="">Seleccione</option>';
+                $.each(response, function(index, value){
+                    options += '<option value="'+value.id+'">'+value.etapa+'</option>';
+                }); 
+                $('.tilapia').html(options);
+                }
+            }).fail(function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+            });
+            });
+        </script>
+
+        <script>
+            function validarFormulario() {
+                var opcion = document.getElementById('selec-etapa');
+                var valorSeleccionado = opcion.value;
+                var suma = parseFloat(document.getElementById('total').value);
+                //var suma = $('#total');
+
+
+                // Verificar si se ha seleccionado la opción por defecto
+                if (valorSeleccionado === '') {
+                    alert('Por favor, seleccione una opción.');
+                    return false; // Evitar el envío del formulario
+                }
+                if(suma !== 100.00){
+                    alert("El porcentaje no es igual al 100%.");
+                    return false;
+                }
+
+                var mensaje = alert("Datos guardados...")
+                return mensaje;  
+                // Si se ha seleccionado una opción válida, permitir el envío del formulario
+                
+            }
+        </script>
+
         <script src="assets/js/vendor.min.js"></script>
         <script src="assets/js/app.min.js"></script>
 
         <!-- third party js -->
-        <script src="assets/js/vendor/apexcharts.min.js"></script>
         <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
         <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
         <!-- third party js ends -->
